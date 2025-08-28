@@ -1,0 +1,65 @@
+execve("./ex4_copia", ["./ex4_copia"], 0x7ffd4a009bd0 /* 104 vars */) = 0
+brk(NULL)                               = 0x5b76e2fee000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x78d9092bd000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=26503, ...}) = 0
+mmap(NULL, 26503, PROT_READ, MAP_PRIVATE, 3, 0) = 0x78d9092b6000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+fstat(3, {st_mode=S_IFREG|0755, st_size=2125328, ...}) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2170256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x78d9090a4000
+mmap(0x78d9090cc000, 1605632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x78d9090cc000
+mmap(0x78d909254000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b0000) = 0x78d909254000
+mmap(0x78d9092a3000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1fe000) = 0x78d9092a3000
+mmap(0x78d9092a9000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x78d9092a9000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x78d9090a1000
+arch_prctl(ARCH_SET_FS, 0x78d9090a1740) = 0
+set_tid_address(0x78d9090a1a10)         = 33343
+set_robust_list(0x78d9090a1a20, 24)     = 0
+rseq(0x78d9090a2060, 0x20, 0, 0x53053053) = 0
+mprotect(0x78d9092a3000, 16384, PROT_READ) = 0
+mprotect(0x5b76dfdb9000, 4096, PROT_READ) = 0
+mprotect(0x78d9092f5000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x78d9092b6000, 26503)           = 0
+clock_gettime(CLOCK_PROCESS_CPUTIME_ID, {tv_sec=0, tv_nsec=1063048}) = 0
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}) = 0
+getrandom("\xc6\x35\xbb\x88\x64\x29\x5e\x09", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x5b76e2fee000
+brk(0x5b76e300f000)                     = 0x5b76e300f000
+write(1, "=== Exerc\303\255cio 4: C\303\263pia de Arqu"..., 40) = 40
+write(1, "Copiando: dados/origem.txt -> da"..., 48) = 48
+write(1, "\n", 1)                       = 1
+openat(AT_FDCWD, "dados/origem.txt", O_RDONLY) = 3
+openat(AT_FDCWD, "dados/destino.txt", O_WRONLY|O_CREAT|O_TRUNC, 0644) = 4
+read(3, "Este \303\251 o arquivo de origem para"..., 256) = 256
+write(4, "Este \303\251 o arquivo de origem para"..., 256) = 256
+read(3, "rar\ncomo o programa se comporta "..., 256) = 256
+write(4, "rar\ncomo o programa se comporta "..., 256) = 256
+read(3, "er\303\243o necess\303\241rias.\n\nObserve no "..., 256) = 256
+write(4, "er\303\243o necess\303\241rias.\n\nObserve no "..., 256) = 256
+read(3, ", rsync, backup, etc.\n\nQuando te"..., 256) = 256
+write(4, ", rsync, backup, etc.\n\nQuando te"..., 256) = 256
+read(3, "rno das syscalls\n- Feche file de"..., 256) = 256
+write(4, "rno das syscalls\n- Feche file de"..., 256) = 256
+read(3, "mado: 1200 bytes.\nCom buffer de "..., 256) = 84
+write(4, "mado: 1200 bytes.\nCom buffer de "..., 84) = 84
+read(3, "", 256)                        = 0
+close(3)                                = 0
+close(4)                                = 0
+clock_gettime(CLOCK_PROCESS_CPUTIME_ID, {tv_sec=0, tv_nsec=1456766}) = 0
+write(1, "\n", 1)                       = 1
+write(1, "=== Estat\303\255sticas ===\n", 22) = 22
+write(1, "Bytes copiados: 1364\n", 21)  = 21
+write(1, "Opera\303\247\303\265es: 6\n", 15) = 15
+write(1, "Tempo: 0.000393 segundos\n", 25) = 25
+write(1, "Throughput: 3389.39 KB/s\n", 25) = 25
+write(1, "\n", 1)                       = 1
+write(1, "Verifica\303\247\303\243o: diff dados/origem"..., 55) = 55
+exit_group(0)                           = ?
++++ exited with 0 +++
